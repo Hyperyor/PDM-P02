@@ -36,7 +36,7 @@ public class Registro extends AppCompatActivity {
 
         apellido.setText(user.getString("apellido"));
 
-        if(user.getInt("edad") != -1)
+        if(user.getInt("edad") > 0)
         {
             String edadStr = "" + user.getInt("edad");
             edad.setText(edadStr);
@@ -61,7 +61,21 @@ public class Registro extends AppCompatActivity {
 
                     miIntent.putExtra("apellido", apellido.getText().toString());
 
-                    miIntent.putExtra("edad", edad.getText().toString());
+
+                    if(Integer.parseInt(edad.getText().toString()) <= 0)
+                    {
+                        miIntent.putExtra("edad", "-1");
+
+                        Toast avisoEdad =
+                                Toast.makeText(getApplicationContext(),
+                                        R.string.edadInvalida, Toast.LENGTH_SHORT);
+
+                        avisoEdad.show();
+                    }
+                    else
+                    {
+                        miIntent.putExtra("edad", edad.getText().toString());
+                    }
 
                     //miIntent.putExtras(datos);
 
@@ -72,7 +86,7 @@ public class Registro extends AppCompatActivity {
                     setResult(RESULT_CANCELED);
                     Toast toast1 =
                             Toast.makeText(getApplicationContext(),
-                                    "No se han introducido datos", Toast.LENGTH_SHORT);
+                                    R.string.sinDatos, Toast.LENGTH_SHORT);
 
                     toast1.show();
                 }
@@ -94,5 +108,10 @@ public class Registro extends AppCompatActivity {
         finish();
 
 
+    }
+
+    @Override protected void onDestroy() {
+        Log.i("Ciclo de vida", "Estamos en el OnDestroy de la actividad REGISTRO");
+        super.onDestroy();
     }
 }

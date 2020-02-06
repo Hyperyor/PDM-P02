@@ -1,16 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PDM-P02</string>
-    <string name="botonRegistro">Sign up</string>
-    <string name="botonValorar">Rate</string>
-    <string name="botonSalir">Exit</string>
     <string name="botonCancelar">Cancel</string>
     <string name="botonOk">Send</string>
-    <string name="vecesValorada">" Ratings number: "</string>
-    <string name="botonVisualizar">Check data</string>
-    <string name="labelNombre">Name</string>
+    <string name="botonRegistro">Sign up</string>
+    <string name="botonSalir">Exit</string>
+    <string name="botonValorar">Rate</string>
+    <string name="botonVisualizar">Check Data</string>
     <string name="labelApellido">Surname</string>
     <string name="labelEdad">Age</string>
     <string name="labelMedia">Average Rating</string>
+    <string name="labelNombre">Name</string>
+    <string name="vecesValorada">"Ratings number: "</string>
     <string name="sinDatos">No data introduced</string>
     <string name="edadInvalida">Invalid Age</string>
 </resources>

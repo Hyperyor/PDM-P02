@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PDM-P02</string>
+    <string name="botonCancelar">Cancelar</string>
+    <string name="botonOk">Enviar</string>
+    <string name="botonRegistro">Registro</string>
+    <string name="botonSalir">Salir</string>
+    <string name="botonValorar">Valorar</string>
+    <string name="botonVisualizar">Ver datos</string>
+    <string name="labelApellido">Apellido</string>
+    <string name="labelEdad">Edad</string>
+    <string name="labelMedia">Valoracion Media</string>
+    <string name="labelNombre">Nombre</string>
+    <string name="vecesValorada">Numero de valoraciones:</string>
+    <string name="sinDatos">Sin datos</string>
+    <string name="edadInvalida">Edad inválida</string>
+</resources>
