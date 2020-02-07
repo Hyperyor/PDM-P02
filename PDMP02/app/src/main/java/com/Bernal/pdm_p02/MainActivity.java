@@ -77,39 +77,47 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
 
         if(resultCode == RESULT_OK)
         {
-            switch(requestCode)
-            {
-                case 11:
-                    nombreUsuario = data.getExtras().getCharSequence("nombre").toString();
 
-                    apellidoUsuario = data.getExtras().getCharSequence("apellido").toString();
-
-                    edadUsuario = Integer.parseInt(data.getExtras().getCharSequence("edad").toString());
-
-                    boton_registro.setText("Editar");
-
-                    /*Toast toast1 =
-                            Toast.makeText(getApplicationContext(),
-                                    nombreUsuario + " " + " " + apellidoUsuario + " " + edadUsuario, Toast.LENGTH_SHORT);
-
-                    toast1.show();*/
-                    /** Usamos data.getExtras() si la hija usa putExtra() *
-                     *  o data.getData() si la hija usa setData()         */
-                    break;
-
-                case 22:
+                if(requestCode == 22)
+                {
                     contadorValoraciones ++;
 
                     vecesValorada.setText(""+contadorValoraciones);
+                    //Log.i("Control", data.getExtras().getCharSequence("valoracion").toString());
+
+
 
                     acumuladorValoraciones += Integer.parseInt(data.getExtras().getCharSequence("valoracion").toString());
 
-                    Toast toast1 =
+ /*                   Toast toast1 =
                             Toast.makeText(getApplicationContext(),
                                     R.string.vecesValorada  + contadorValoraciones , Toast.LENGTH_SHORT);
 
-                    toast1.show();
-                    break;
+                    toast1.show();*/
+                }
+                else
+                {
+
+
+                    if(requestCode == 11) {
+
+                        nombreUsuario = data.getExtras().getCharSequence("nombre").toString();
+
+                        apellidoUsuario = data.getExtras().getCharSequence("apellido").toString();
+
+                        edadUsuario = Integer.parseInt(data.getExtras().getCharSequence("edad").toString());
+
+                        boton_registro.setText("Editar");
+
+                        /*Toast toast1 =
+                                Toast.makeText(getApplicationContext(),
+                                        nombreUsuario + " " + " " + apellidoUsuario + " " + edadUsuario, Toast.LENGTH_SHORT);
+
+                        toast1.show();*/
+                        /** Usamos data.getExtras() si la hija usa putExtra() *
+                         *  o data.getData() si la hija usa setData()         */
+                    }
+
             }
 
 

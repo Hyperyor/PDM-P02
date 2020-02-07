@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.RatingBar;
 
@@ -24,7 +25,9 @@ public class Valorar extends AppCompatActivity {
 
         int num = (int) barra.getRating();
 
-        miIntent.putExtra("valoracion", ""+num);
+        String valor = ""+num;
+
+        miIntent.putExtra("valoracion", valor);
 
         setResult(RESULT_OK, miIntent);
         finish();
